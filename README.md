@@ -17,7 +17,12 @@ _Video prediction is an extrapolation task that predicts future frames given pas
 ## Requirements
 - Currently only Linux is supported.
 - 64-bit Python 3.6 installation or newer. We recommend using Anaconda3.
-- All the experiments are conducted using NVIDIA RTX 3090Ti. 
+- All the experiments are conducted using NVIDIA RTX 3090Ti. And we recommend using 8 GPUS for faster optimization.
+
+As shown in the parallel example in 
+```
+./scripts/run.py 
+```
 
 ## Installation
 Clone the repository and set up a conda environment with all dependencies as follows:
