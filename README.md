@@ -30,6 +30,7 @@ source activate videopred
 
 ## Results
 **We provide our results on various datasets as indicted below.**
+
 **All the results are sorted in** [**Google Drive**](https://drive.google.com/drive/folders/1OkZmFUL3AYpWUN2q-QgvwE3TueoALBu9?usp=sharing)
 
 |Dataset|Resolution|
@@ -70,7 +71,7 @@ We also provide a script as a reference.
 
 Note that all the scores reported in the paper are using the setting of optimized every frame for 3K iterations. And We also provide a convergence analysis as indicted in Paper Section 4.4, that our method conveges around 1K iterations. 
 
-## Evaluation
+### Evaluation
 
 Our evaluation follows the setting of [FVS](https://github.com/YueWuHKUST/CVPR2020-FutureVideoSynthesis).
 For the evaluation of Cityscapes and Kitti datasets, we use the same test split as FVS, and also adopt the MS-SSIM and LPIPS as evaluation metric.
@@ -83,7 +84,7 @@ By running the evaluation script within our provided result, the score should be
 
 
 
-## Citation
+### Citation
 
 Please cite the following paper if this work helps your research:
 
@@ -94,8 +95,8 @@ Please cite the following paper if this work helps your research:
 		year={2022}
 	}
 
-## Contact
+### Contact
 If you have any questions, please contact Yue Wu (wu.kathrina@gmail.com) and Qifeng Chen (chenqifeng22@gmail.com)
 
-## Acknowledgements
+### Acknowledgements
 Our Work is built upon [RIFE](https://github.com/megvii-research/ECCV2022-RIFE) and [RAFT](https://github.com/princeton-vl/RAFT). We thank the authors for their excellent work. 
