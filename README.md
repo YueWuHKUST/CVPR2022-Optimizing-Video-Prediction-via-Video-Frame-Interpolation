@@ -29,15 +29,16 @@ source activate videopred
 ```
 
 ## Results
-We provide our results on various datasets as indicted below
+**We provide our results on various datasets as indicted below.**
+**All the results are sorted in** [**Google Drive**](https://drive.google.com/drive/folders/1OkZmFUL3AYpWUN2q-QgvwE3TueoALBu9?usp=sharing)
 
-|Dataset|Resolution|Download|
-|:----:|:-----------:|:-----------:|
-|Cityscapes | 256x256 |[link]() |
-|Kitti | 256x256 |[link]() |
-|DAVIS | 256x256 |[link]() |
-|Middlebury | 256x256 |[link]() |
-|DAVIS | 256x256 |[link]() |
+|Dataset|Resolution|
+|:----:|:-----------:|
+|Cityscapes | 1024x512 |
+|Kitti | 832x256 |
+|DAVIS | 896x480 |
+|Middlebury | 640x480 |
+|Vimeo | 448x256 |
 
 ## Evaluation datasets
 All the evaluation datasets are downloaded from official link and conduct only resize operations without any other special preprocessing.
@@ -52,13 +53,20 @@ All the evaluation datasets are downloaded from official link and conduct only r
     ...
 ```
 
+
 ### Running Optimization
 We provide optimization scripts in folder "./scripts/"
 For example, 
 ```
 bash ./scrips/cityscapes.sh
 ```
-All the experiments in the paper are conducted using multiprocessing for reducing time. We also provide a script, ./scripts/run.py as a reference.
+All the experiments in the paper are conducted using multiprocessing for reducing time. 
+
+We also provide a script as a reference.
+```
+./scripts/run.py
+```
+
 
 Note that all the scores reported in the paper are using the setting of optimized every frame for 3K iterations. And We also provide a convergence analysis as indicted in Paper Section 4.4, that our method conveges around 1K iterations. 
 
@@ -66,6 +74,14 @@ Note that all the scores reported in the paper are using the setting of optimize
 
 Our evaluation follows the setting of [FVS](https://github.com/YueWuHKUST/CVPR2020-FutureVideoSynthesis).
 For the evaluation of Cityscapes and Kitti datasets, we use the same test split as FVS, and also adopt the MS-SSIM and LPIPS as evaluation metric.
+
+And the evaluation scripts are put in 
+```
+./evaluation/
+```
+By running the evaluation script within our provided result, the score should be identical to scores reported in the paper.
+
+
 
 ## Citation
 

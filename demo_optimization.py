@@ -323,33 +323,6 @@ elif args.dataset == 'middlebury':
         video.append(image_list)
     num_of_videos = len(video)
     print("number of videos is ", num_of_videos)
-elif args.dataset == 'ucf':
-    davis_root = "../dataset/UCF101/test_set/"
-    test_list = '../dataset/UCF101/ucf101_train_test_split/testlist01.txt'
-    # read in ucf test list
-    f = open(test_list, 'r')
-    filelist = f.readlines()
-    f.close()
-    new_list = []
-    for k in range(len(filelist)):
-        if (k + 1)% 10 == 0:
-            new_list.append(filelist[k])
-    print("len new list", len(new_list))
-    assert len(new_list) == 378
-
-    scene_name = sorted(os.listdir(davis_root))
-
-    video = []
-    for i in range(len(new_list)):    
-        cnt_seq = new_list[i].split("/")
-        scene_name = cnt_seq[0]
-        video_name = cnt_seq[1][:-5]#remove \n and .avi
-        cnt_seq_dir = davis_root + scene_name + "/" + video_name + "/"
-        frames = sorted(glob.glob(cnt_seq_dir + "*.jpg"))
-        #video.append((frames, scene_name, video_name))
-        video.append(frames)
-    num_of_videos = len(video)
-    print("number of videos is ", num_of_videos)
 elif args.dataset == 'kitti':
     kitti_root = "../dataset/KITTI/test_set/"
     video = []
