@@ -1,4 +1,4 @@
-name: videopred2021
+name: videopred
 channels:
   - pytorch
   - nvidia
@@ -132,4 +132,3 @@ dependencies:
     - websocket-client==1.2.1
     - werkzeug==2.0.1
     - zipp==3.5.0
-prefix: /home/yue/anaconda3/envs/videopred2021

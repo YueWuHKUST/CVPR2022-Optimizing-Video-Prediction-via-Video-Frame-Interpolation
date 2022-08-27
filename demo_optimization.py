@@ -488,9 +488,6 @@ for video_id in range(args.start_id, args.start_id + args.length):
                 index_list.append(it)
                 loss_list.append(t2n(loss))
                 #ssim_list.append(pytorch_ssim.ssim(frame3, gt).detach().cpu().numpy())
-                
-            if it  == args.stage1_iters:
-                print("optimization time", time.time() - start_time)
 
             
             if it  == 1:
