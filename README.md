@@ -33,8 +33,11 @@ conda env create -f environment.yml
 source activate videopred
 ```
 
+We use https://github.com/princeton-vl/RAFT to compute optical flow. git clone RAFT in current project directory and download their pretrained models for optimization.
+
+
 ## Results
-**We provide our results on various datasets as indicted below.**
+**We provide our results on various datasets as indicated below.**
 
 **All the results are sorted in** [**Google Drive**](https://drive.google.com/drive/folders/1OkZmFUL3AYpWUN2q-QgvwE3TueoALBu9?usp=sharing)
 
@@ -66,7 +69,7 @@ For example,
 ```
 bash ./scrips/cityscapes.sh
 ```
-All the experiments in the paper are conducted using multiprocessing for reducing time. 
+All the experiments in the paper are conducted using multiprocessing to reduce time. 
 
 We also provide a script as a reference.
 ```
